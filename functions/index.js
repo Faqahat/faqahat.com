@@ -16,12 +16,12 @@ app.get("/" , (req,res) => {
         method: "post",
         params: {
             grant_type: "refresh_token",
-            refresh_token: 'AQDoJJPTp4Tpp1WUr-MzB9rI1p-3aHu3hIuT866A9mMYGtUoJB6GkYZZFqPWrqDAMueN9f5Hq_LTwxj5NgCW64q6rTP2OMyGK-zKXxTeIKmxrOVAHKIrLsyyuPBnzBHMQRJxAg'
+            refresh_token: ''
         },
         headers: {
             "Accept": "application/json",
             'Content-Type': 'application/x-www-form-urlencoded',
-          'Authorization': 'Basic OWY2YTZlMzk2ZTE3NDc2MDg4MjhkMmNmMjdkODE5YTQ6YjBlOWU0ODM4MDA4NDQ3YjhhZmI4MmU3YjExODUzNTE=' // client id and secret from env
+          'Authorization': '' // client id and secret from env
         },
 
     })
