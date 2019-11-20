@@ -1,0 +1,77 @@
+import React from "react"
+//import { Link } from "gatsby"
+
+import Layout from "../components/layout"
+import "../css/bulma.css"
+import "../css/main.css"
+import "../css/spotify.css"
+import "../css/style.css"
+import p3c from "../images/p3c.png"
+
+const IndexPage = () => (
+  <Layout>
+   <div class="style-2">
+<div class="container">
+
+	<div class="columns">
+  <div class="column is-2"></div>
+	  <section class="wrap column is-8">
+		<div class="columns">
+			<section class="content column is-7">
+          <strong><h2 style={{color: "#c26e20"}}>Hello!  / 여보세요!</h2></strong>
+          <div class="h4"><p>My name is Waleed  general known as Faqahat I am a passionate & self taught <strong>Full Stack Developer / System Admin / UI,UX Designer</strong> with a keen interest in the latest technologies. With experience working on multiple robust globally released products since 2010, I strive to create impact on others lives to be more creative, productive, and fun. 
+            Along with my development work, I actively support inclusion and diversity in the technology industry through various community events and organizations.&nbsp;</p> <p>This is a place holder page.. I am working on a new portfolio/E-Resume till than you may connect with me via social links in footer</p></div>			
+			</section>
+			<section class="content column is-5">
+          <center><img ondragstart="return false" ondrag="return false" oncontextmenu="return false" src={p3c}  class="img-responsive" />
+          <br />
+          </center>
+			</section>
+		</div>
+
+		<div class="columns">
+			<section class="subscribe column is-full">
+        <div class="form-wrap">				
+          <input type="text" name="email" value="" id="email-field" placeholder="Hola at me  faqahat@gmx.com !" disabled />
+        </div>
+			</section>
+	
+			<div class="column is-full">
+				<center>
+						<p id="spotifyHeader"></p>
+						<span id="trackArtwork"></span>
+						<span id="trackName"></span>
+						<span id="artist"></span> 
+					</center>
+			</div>	
+		</div>	
+		<div class="columns">
+			<section class="column is-full">
+				<div class="footer">
+					<div class="columns">
+						<div class="column is-half"><a target="_blank"  href="https://www.facebook.com/faqahatcat" class="fa fa-facebook-square"></a><a href="https://twitter.com/faqa_cat" target="_blank"  class="fa fa-twitter"></a><a target="_blank" href="http://instagram.com/faqahat.js" class="fa fa-instagram"></a><a target="_blank"  href="https://www.youtube.com/channel/UC8U05ZIBDDZDIJMk4bsc16w?view_as=subscriber" class="fa fa-youtube"></a>
+						<a target="_blank"  href="https://github.com/faqahat" class="fa fa-github-square"></a></div>
+						<div class="column is-half"> <font color="#555">Hosted at</font><a href="https://firebase.google.com" target="_blank"><img ondragstart="return false" ondrag="return false" oncontextmenu="return false" src="static/firebase.png" height="20px" width="20px" /></a></div>
+					</div>
+				</div>
+			</section>
+		</div>
+
+    <div class="column is-2"></div>
+	  
+    </section>
+	
+	</div>
+	
+</div>
+
+
+
+
+
+
+</div>
+  </Layout>
+)
+
+export default IndexPage
