@@ -27,6 +27,15 @@ module.exports = {
         icon: `src/images/zeit-black-triangle.svg`, // This path is relative to the root of the site.
       },
     },
+    {
+      resolve: `gatsby-plugin-nprogress`,
+      options: {
+        // Setting a color is optional.
+        color: `tomato`,
+        // Disable the loading spinner.
+        showSpinner: false,
+      },
+    },
 
   ],
 }

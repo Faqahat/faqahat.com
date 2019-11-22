@@ -11,7 +11,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faInstagram,faYoutube,faTwitter , faGithub } from '@fortawesome/free-brands-svg-icons'
 const IndexPage = () => (
 <Layout>
-   <div class="style-2">
+
 		<div class="container">
 			<div class="columns">
   				<div class="column"></div>
@@ -59,7 +59,7 @@ const IndexPage = () => (
 									<a href="https://twitter.com/faqa_cat" target="_blank" rel="noopener noreferrer" ><FontAwesomeIcon icon={faTwitter}/></a>
 									<a target="_blank" rel="noopener noreferrer" href="http://instagram.com/faqahat.js" ><FontAwesomeIcon icon={faInstagram}/></a>
 									<a target="_blank" rel="noopener noreferrer"  href="https://www.youtube.com/channel/UC8U05ZIBDDZDIJMk4bsc16w?view_as=subscriber" ><FontAwesomeIcon icon={faYoutube}/></a>
-									<a target="_blank" rel="noopener noreferrer"  href="https://github.com/faqahat"><FontAwesomeIcon icon={faGithub}/></a>
+									<a target="_blank" rel="noopener noreferrer"  href="https://github.com/faqahat"> <FontAwesomeIcon icon={faGithub}/></a>
 									</div>
 									<div class="column is-2" >  <font color="#555">Hosted at</font><a href="https://now.sh" rel="noopener noreferrer" target="_blank"><svg width="40" height="20" viewBox="0 0 40 20"><g stroke="none" stroke-width="1" fill="var(--geist-foreground)" fill-rule="evenodd"><polygon points="11.0541053 0 22.1082105 19.6826969 0 19.6826969"></polygon></g></svg></a></div>
 								</div>
@@ -74,7 +74,6 @@ const IndexPage = () => (
 				<div class="column"></div>
 			</div>
 		</div>
-	</div>
 </Layout>
 )
 
