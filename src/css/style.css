@@ -184,7 +184,10 @@ overflow:visible;
 
 .style-2 {
 	background-color: #1d2226;
-	color: #797b80
+	color: #797b80;
+	height: 100%;
+	width: 100%;
+	position:absolute;
 }
 
 .wrap {
