@@ -7,7 +7,7 @@ import axios from "axios";
 
 const Spotify = () => {
     let [playingDetails,setPlayingDetails] = useState({
-                isPlaying : true,
+                isPlaying : false,
                 trackName : "",
                 artworkURI : "",
                 artistName : ""
@@ -16,6 +16,7 @@ const Spotify = () => {
     
     function getToken()
     {
+        
         axios.get('/api/spotifyToken')
         .then(function (response) {
             accessToken = response.data;
@@ -81,7 +82,8 @@ const Spotify = () => {
 
     useEffect(() => {
         getToken();
-      });
+        console.log("Fetching  Token")
+      },[]);
     let header="",artWork="",musicName="",artist="",youtubeLink="";
     if(playingDetails.isPlaying) 
     {  
@@ -90,12 +92,12 @@ const Spotify = () => {
     }
     else      
     {
-                    header = "I recently played";
-                    artWork = "";
+                header = "I recently played";
+                artWork = "";
     }
     youtubeLink = `https://www.youtube.com/results?search_query=${playingDetails.trackName} ${playingDetails.artistName}`
     musicName = <a  rel="noopener noreferrer" href={youtubeLink} target="_blank"> {playingDetails.trackName}</a>;
-    artist = `By ${playingDetails.artistName}`;
+    artist = ` ${playingDetails.artistName}`;
 	return(
 
         <div style={{margin: "25px"}}>
