@@ -6,7 +6,7 @@ const Layout = ({ children }) => {
   return (
     <>
     <Helmet>  
-      <body className="style-2" style={{backgroundColor:"#1d2226"}} />
+      <body className="style-2"  bgcolor="#1d2226" />
       <title>Hi I'm Faqahat</title>
     </Helmet>
     <div className="container">

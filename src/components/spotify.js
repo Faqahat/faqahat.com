@@ -13,6 +13,7 @@ const Spotify = () => {
                 artistName : ""
     })
     let accessToken = "";
+    
     function getToken()
     {
         axios.get('/api/spotifyToken')
@@ -20,7 +21,8 @@ const Spotify = () => {
             accessToken = response.data;
             loadPlayingData();
             console.log("API: " + response.data);
-            let refresh = setInterval(loadPlayingData, 10000);
+            setInterval(loadPlayingData, 10000);
+            
         })
     .catch(function (error) {
         console.log(error);
@@ -79,7 +81,7 @@ const Spotify = () => {
 
     useEffect(() => {
         getToken();
-      },[]);
+      });
     let header="",artWork="",musicName="",artist="",youtubeLink="";
     if(playingDetails.isPlaying) 
     {  

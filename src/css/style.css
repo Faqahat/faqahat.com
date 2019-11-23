@@ -1,8 +1,12 @@
+html {
+    height: 100%;
+}
 body {
 	font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 	color: #555;
 	line-height: 1.8em;
-	font-size: 14px
+	font-size: 14px;
+	display: grid;
 }
 
 ul {
@@ -10,9 +14,7 @@ ul {
 	padding: 0 0 0 20px
 }
 
-html {
-overflow:visible;
-}
+
 
 .wrap {
 	margin-top: 30px;
@@ -206,7 +208,7 @@ overflow:visible;
 
 
 .style-2 {
-	background-color: #1d2226;
+
     color: #797b80;
 	
     min-height: 100%;
