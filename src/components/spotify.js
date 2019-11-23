@@ -1,4 +1,4 @@
-import React,{useState, useEffect} from "react"
+import React,{useState/*, useEffect*/} from "react"
 import "../css/bulma.css"
 import "../css/main.css"
 import "../css/style.css"
@@ -13,7 +13,7 @@ const Spotify = () => {
                 artistName : ""
     })
     let accessToken = "";
-    
+    getToken();
     function getToken()
     {
         
@@ -80,10 +80,10 @@ const Spotify = () => {
     }
 
 
-    useEffect(() => {
+   /* useEffect(() => {
         getToken();
         console.log("Fetching  Token")
-      },[]);
+      },[]);*/
     let header="",artWork="",musicName="",artist="",youtubeLink="";
     if(playingDetails.isPlaying) 
     {  
