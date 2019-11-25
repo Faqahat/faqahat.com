@@ -1,4 +1,4 @@
-import React,{useState/*, useEffect*/} from "react"
+import React,{useState, useEffect} from "react"
 import "../css/bulma.css"
 import "../css/main.css"
 import "../css/style.css"
@@ -13,12 +13,8 @@ const Spotify = () => {
                 artistName : ""
     })
     let accessToken = "";
-    getToken();
-    function getToken()
-    {
-        
-        axios.get('/api/spotifyToken')
-        .then(function (response) {
+    useEffect(()=>{
+        axios.get('/api/spotifyToken').then(function (response) {
             accessToken = response.data;
             loadPlayingData();
             console.log("API: " + response.data);
@@ -28,16 +24,18 @@ const Spotify = () => {
     .catch(function (error) {
         console.log(error);
     })
+    },[])
+    
+    
 
-    }
+
     function loadPlayingData() 
     {
         axios.get('https://api.spotify.com/v1/me/player/currently-playing?market=ES',{
             headers: {
                 'Authorization' : 'Bearer ' + accessToken
             }
-          })
-        .then(function (response) {
+          }).then(function (response) {
             if(response.data)
             {
 
@@ -80,10 +78,7 @@ const Spotify = () => {
     }
 
 
-   /* useEffect(() => {
-        getToken();
-        console.log("Fetching  Token")
-      },[]);*/
+
     let header="",artWork="",musicName="",artist="",youtubeLink="";
     if(playingDetails.isPlaying) 
     {  
