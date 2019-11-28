@@ -3,7 +3,7 @@ let axios = require('axios');
 const refreshToken = process.env.refreshtoken;
 const userauth = process.env.userauth;
 module.exports = (req, res) => {
-
+    res.setHeader('Cache-Control', "max-age=0, s-maxage=3600")
     axios({
         url: "https://accounts.spotify.com/api/token",
         method: "post",
